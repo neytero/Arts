@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: 'Caslon';
+    font-weight: 400;
+    font-style: normal;
+    background-color: #FBFBF5;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: Calson-regular;
+    src: url("Laponche/adobe-caslon-pro/ACaslonPro-Regular.otf") format("opentype");
+}

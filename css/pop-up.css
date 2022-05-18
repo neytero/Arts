@@ -1,0 +1,239 @@
+@keyframes pop {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes show-text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pop-up {
+  animation: pop 3s ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  height: 0;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  z-index: 30;
+}
+.pop-up .content {
+  align-self: center;
+  background-image: url(../../assets/home-details/arriere4.png);
+  padding: 70px;
+  width: 437px;
+  background-size: 100% 100%;
+}
+.pop-up .content h2 {
+  font-family: "taken";
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  color: #151344;
+  width: 100%;
+}
+.pop-up .content div {
+  display: inline-block;
+}
+.pop-up .content span {
+  animation: show-text 1s ease 3.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-size: 15px;
+  opacity: 0;
+  text-align: left;
+  color: #151344;
+}
+.pop-up .content a {
+  color: #151344 !important;
+}
+
+.pop-up .content a::before {
+  display: none;
+}
+
+/* POP UP close button */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  animation: show-text 0.8s ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: 0;
+  position: fixed;
+  z-index: 40;
+  color: #151344;
+  width: inherit;
+  text-align: right;
+}
+
+@media screen and (max-width: 610px) {
+  .pop-up .content {
+    background-image: url(../../assets/home-details/arriere4.png);
+    padding: 50px;
+    width: 50%;
+    background-size: cover;
+  }
+
+  .pop-up .content h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  .pop-up .content p {
+    font-size: 13px;
+  }
+  label {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .pop-up .content {
+    background-image: url(../../assets/home-details/arriere4.png);
+    padding: 40px;
+    width: 65%;
+    background-size: 100% 100%;
+  }
+
+  .pop-up .content h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  .pop-up .content p {
+    font-size: 13px;
+  }
+  label {
+    font-size: 15px;
+  }
+}
+	.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:30;
+}
+.overlay:target { 
+  visibility: visible;
+  opacity: 1; 
+}
+
+.popup {
+	margin: 10% auto;
+	/* padding: 20px; */
+	background: #fff;
+	/* border-radius: 5px; */
+	width: 43vw;
+	position: relative;
+	z-index: 9999;
+	font-family: "";
+	}
+ 
+.popup .close {
+	position: absolute;
+	top: 10px;
+	right: 14px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+.popup .close:hover {
+  opacity:0.8;
+}
+.popup .contentpop {
+ /* max-height: 30%; */ 
+  overflow: hidden;
+}
+
+
+.imgright {
+	width: 20vw;
+	margin: -1%;
+}
+.imgright img{width:100%;}
+.txtleft {
+	position: absolute;
+	top: 26%;
+	left: 50%;
+	text-align: center;
+	width: 45%;
+	font-size: 1vw;
+}
+.mybtn {
+	background-color: #151344;
+	width: 70%;
+	color: white;
+	margin-top: 10%;
+	height: 4.6vh;
+	border: none;
+}
+
+
+@media screen and (max-width: 1024px){
+  .box{
+    /*width: 70%;*/
+  }
+  .popup {
+	width: 77%;
+	height: 44vh;
+	margin: 38% auto;
+}
+.txtleft {
+	position: absolute;
+	top: 24%;
+	left: 18%;
+	text-align: center;
+	width: 66%;
+	font-family: "Noe Display";
+	font-size: 2.8vw;
+}
+	.imgright img{display:none;}
+}
+@media screen and (max-width: 440px){
+	.txtleft {
+		position: absolute;
+		top: 24%;
+		left: 10%;
+		text-align: center;
+		width: 80%;
+		font-family: "Noe Display";
+		font-size: 3.3vw;
+	}
+	
+}

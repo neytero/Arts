@@ -1,0 +1,71 @@
+.taille{
+    width: 85%;
+    margin: auto;
+}
+.titre{
+    font-family: 'Termina Demi';
+    font-size: 1.15vw;
+    letter-spacing: 0.05em;
+    color: #151344;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0px;
+}
+
+.text-centre{
+    font-family: 'Caslon-regular';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #151344;
+    text-align: center;
+    line-height: 8px;
+}
+
+.titre-dessous{
+    font-family: 'Termina Demi';
+    font-size: 1.15vw;
+    letter-spacing: 0.05em;
+    color: #151344;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.condition-générales{
+    font-family: 'Caslon-regular';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #151344;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titre-generique{
+    font-family: 'Caslon-regular';
+    font-size: 1vw;
+    letter-spacing: 0.05em;
+    color: #151344;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1600px){
+    .titre-generique{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .titre-dessous{
+        font-size: 16px;
+    }
+
+    .titre{
+        font-size: 16px;
+    }
+
+    .condition-générales{
+        margin-top: 30px;
+    }
+}

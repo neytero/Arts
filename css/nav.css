@@ -1,0 +1,356 @@
+
+nav .booking:hover {
+    cursor: pointer;
+}
+
+nav {
+    font-family: "Termina Demi";
+    font-weight: 500;
+    font-style: normal;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    opacity: 0;
+    letter-spacing: 0.05em;
+}
+
+nav.scroll {
+    background-color: #fbfbf5;
+}
+
+nav.scroll .link ul {
+    background-color: #fbfbf5 !important;
+    margin-top: 0px !important;
+}
+
+nav a {
+    color: white;
+}
+
+nav.scroll * {
+    color: #151344 !important;
+}
+
+nav.scroll ul li {
+    border-bottom: 1px solid #151344 !important;
+}
+
+nav:not(.scroll) img#menu-btn-blue,
+nav:not(.scroll) img#logo-blue {
+    display: none !important;
+}
+
+nav.scroll img#menu-btn-blue,
+nav.scroll img#logo-blue {
+    display: block;
+}
+
+nav.scroll img#menu-btn-blue {
+    padding-right: 20px;
+}
+
+nav:not(.scroll) img#menu-btn-white,
+nav:not(.scroll) img#logo-white {
+    display: block;
+}
+
+nav:not(.scroll) img#menu-btn-white {
+    padding-right: 20px;
+}
+
+nav.scroll img#menu-btn-white,
+nav.scroll img#logo-white {
+    display: none !important;
+}
+
+nav>.logo,
+nav>img {
+    padding: 20px 0;
+    padding-top: 25px;
+}
+
+nav>* {
+    display: flex;
+}
+
+nav .logo,
+nav .booking {
+    flex: 1;
+    margin: 0 20px;
+}
+
+nav .logo {
+    justify-content: flex-start;
+    margin-top: 2px;
+}
+
+nav .logo img {
+    width: 13vw;
+    max-width: 150px;
+}
+
+nav .booking {
+    text-align: right;
+    justify-content: flex-end;
+    padding: 10px 0;
+    margin-top: 17px;
+}
+
+nav .booking a {
+    border-bottom: 1px solid white;
+}
+
+nav.scroll .booking a {
+    border-bottom: 1px solid #151344;
+}
+
+nav .pages {
+    flex: 4;
+    justify-content: center;
+}
+
+nav .pages .link {
+    text-align: center;
+    position: relative;
+    padding: 25px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .pages .link>a {
+    margin: 0px 7px;
+    width: max-content;
+    margin-top: 2px;
+}
+
+nav .pages .link:first-child>a {
+    padding-right: 0px;
+    padding-left: 0;
+}
+
+nav .booking .link>a,
+nav .pages .link:last-child>a {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+nav .pages .link>a,
+nav .booking .link>a {
+    transition: all 0.5s ease-in-out;
+    border-bottom: 1px solid transparent;
+}
+
+nav .pages .link>a:hover,
+nav .booking .link>a {
+    font-size: 0.67rem;
+    border-bottom: 1px solid white;
+
+}
+
+a::before {
+    display: block;
+    content: attr(title);
+    font-size: 0.68rem;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+nav.scroll .pages .link>a:hover,
+nav.scroll .booking .link>a {
+    border-bottom: 1px solid #151344;
+}
+
+nav .pages .link ul {
+    animation: all 2s ease;
+    -webkit-animation: all 2s ease;
+    -moz-animation: all 2s ease;
+    -o-animation: all 2s ease;
+    -ms-animation: all 2s ease;
+    position: absolute;
+    opacity: 0;
+    padding: 10px 20px;
+    background-color: rgba(100, 100, 100, 0.3);
+    list-style: none;
+    width: 211px;
+    top: 79%;
+    display: none;
+}
+
+nav .pages .link ul li {
+    color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    font-size: 0.60rem;
+}
+
+nav .pages .link:hover ul,
+nav .pages .link ul:hover {
+    opacity: 1;
+    display: block;
+
+}
+
+.booking-fixed {
+    bottom: 0;
+    padding: 20px 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    font-family: "Termina Demi";
+}
+
+.hide-booking-fixed {
+    transform: translateY(100%);
+}
+
+.booking-fixed a {
+    color: white;
+    border-bottom: 1px solid white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.booking-fixed.scroll {
+    font-family: "Termina Demi";
+    width: 100%;
+    background-color: #fbfbf5;
+}
+
+.booking-fixed.scroll a {
+    color: #151344;
+    border-bottom: 1px solid #151344;
+}
+
+img#menu-btn,
+img#close-btn {
+    height: 1.2rem;
+    margin-right: 15px;
+}
+
+img#close-btn {
+    right: 7px;
+    top: 25px;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+}
+
+#menu-mobile {
+    font-family: "Termina Demi";
+    font-weight: 400;
+    position: fixed;
+    z-index: 2;
+    background-color: #FBFBF5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: -100vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+#menu-mobile * {
+    color: #151344;
+}
+
+.menu-open {
+    transform: translateX(-100%);
+}
+
+.menu-links {
+    padding: 6vh 10vw;
+    width: -webkit-fill-available;
+}
+
+.menu-links .link {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+.menu-links .link ul {
+    list-style: none;
+    margin: 10px 0 20px 0;
+}
+
+.menu-links .link ul li {
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 11px 0 2px 0;
+    border-bottom: 1px solid #151344;
+    font-size: 0.65rem;
+    margin-bottom: 2px;
+}
+
+
+
+#menu-mobile li,
+#menu-mobile a {
+    color: #151344;
+}
+
+#menu-mobile .language {
+    display: flex;
+    margin-right: 14vw;
+    margin-bottom: 8vh;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#menu-mobile .language div {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1100px) {
+    nav .pages .link ul {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    nav .pages .link ul {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 920px) {
+    nav .logo img {
+        width: 55vw;
+        max-width: 195px;
+    }
+
+    nav {
+        align-items: center;
+    }
+
+    nav>.logo {
+        padding-bottom: 17px;
+        padding-top: 17px;
+    }
+
+    #home-footer .footer .address,
+    #home-footer .footer .language,
+    #home-footer .footer .contact {
+        font-size: 0.55rem;
+    }
+
+    .menu-links .link ul {
+        list-style: none;
+        margin: 10px 0 20px 0;
+        padding-left: 15px;
+    }
+
+    .menu-links {
+        padding: 6vh 10vw 0vh 10vw;
+    }
+}

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'taken-alternate';
+    src: url('../assets/fonts/taken_by_vultures/Taken_by_Vultures_Alternates.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'taken';
+    src: url('../assets/fonts/taken_by_vultures/Taken_by_Vultures.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caslon';
+    src: url('../assets/fonts/Caslon/ACaslonPro-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.taken {
+    font-family: 'taken';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.termina {
+    font-family: 'Termina';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.caslon {
+    font-family: 'Caslon';
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* font-family: adobe-caslon-pro, serif;
+font-weight: 700;
+font-style: italic;
+
+font-family: adobe-caslon-pro,serif;
+font-weight: 600;
+font-style: italic; */

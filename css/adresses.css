@@ -1,0 +1,260 @@
+body{
+    background-color: #FBFBF5;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.home img{
+    width: 100%;
+}
+
+#homeImgMobile{
+    display: none;
+}
+
+#description_classic_room{
+    max-width: 46vw;
+    color: #151344;
+    font-family: 'Caslon-regular';
+    font-size: 16px;
+    text-align: left;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rooms{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.room{
+    justify-self: center;
+    width: fit-content;
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
+    justify-items: center;
+}
+
+.title {
+    font-family: "taken";
+    font-weight: normal;
+    font-style: normal;
+    text-align: right;
+    font-size: 3.5rem;
+    margin-top: 25px;
+    margin-bottom: 0;
+    justify-self: end;
+    margin-right: 8px;
+    color: #151344;
+}
+
+.resto{
+    margin-right: 40px;
+}
+
+.infosDiv{
+    justify-self: center;
+    align-self: stretch;
+}
+
+.roomImg{
+    height: 46.8vw;
+    width: 46.8vw;
+}
+
+.roomName{
+    color: #151344;
+    text-align: center;
+    height: fit-content;
+    width: 33.2vw;
+    padding-top:20px;
+    padding-bottom:10px;
+    text-transform: uppercase;
+}
+
+.roomDescription{
+    color: #151344;
+    width: 29.520833333333332vw;
+    height: fit-content;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Caslon-regular';
+    margin: 0 auto 30px auto;
+    line-height: 22px;
+    align-self: flex-start;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 4.375vw;
+}
+
+.button{
+    color: #151344;
+    background-color: #FBFBF5;
+    text-transform: uppercase;
+    border: solid #151344 2px;
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 1.07vw;
+    padding-right: 1.07vw;
+    padding-top: 0.21vw;
+    padding-bottom: 0.214vw;
+    font-family: "Termina";
+}
+
+.reserveButton{
+    margin-left: 1.71875vw;
+}
+
+.titleRooms{
+    color: #151344;
+    font-family: 'Termina Demi';
+    font-size: 1.15vw;
+    letter-spacing: 0.05em;
+    padding-bottom: 2vw;
+    margin-top: 20px;
+}
+
+.roomName{
+    font-family: "Termina Demi";
+    font-size: 1vw;
+    letter-spacing: 0.05vw;
+}
+.roomName br{
+    display:none;
+}
+
+.adresse{
+    border-bottom: 1px solid #151344;
+    padding: 0px;
+}
+
+@media screen and (max-width: 1400px){
+    .roomName{
+        font-size: 14px;
+    }
+
+    .titleRooms{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 769px){
+    #description_classic_room{
+        max-width: 70%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .title{
+        margin-top: 20px;
+    }
+
+    .rooms{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, auto);
+        column-gap: 20px;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .room{
+        width: 95%;
+        grid-template-rows: repeat(4, min-content);
+    }
+
+    .roomImg{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .roomName{
+        width: 100%;
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        margin: 0px;
+    }
+
+    .roomName br{
+        display: block;
+    }
+
+    .roomDescription{
+        font-size: 14px;
+        width: 70%;
+        padding: 0.05vw;
+        text-align: left;
+        line-height: 22px;
+    }
+
+    .titleRooms{
+        font-size: 13px;
+        padding: 15px 0px;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .button{
+        border : solid #151344 1px;
+        font-size : 10px;
+        padding : 5px 10px;
+    }
+
+    .buttons{
+        margin-bottom: 30px;
+        margin-top: 20px;
+        align-self: flex-start;
+    }
+
+    .reserveButton{
+        margin-left : 33px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    #homeImgMobile{
+        display: block;
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+    }
+
+    #homeImgDesk{
+        display: none;
+    }
+
+    .title{
+        font-size: 3.5rem;
+    }
+
+    .roomName{
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .roomDescription{
+        margin: 0 auto 0 auto;
+    }
+}

@@ -1,0 +1,216 @@
+body{
+    background-color: #FBFBF5;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.home img{
+    width: 100%;
+}
+
+#homeImgMobile{
+    display: none;
+}
+
+.rooms{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.room{
+    justify-self: center;
+    width: fit-content;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#mid{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.infosDiv{
+    justify-self: center;
+    align-self: stretch;
+}
+
+.roomImg{
+    height: 46.8vw;
+    width: 46.8vw;
+}
+
+.roomName{
+    color: #151344;
+    text-align: center;
+    height: fit-content;
+    width: 33.2vw;
+    padding-top:30px;
+    padding-bottom:20px;
+}
+
+.roomDescription{
+    color: #151344;
+    width: 29.520833333333332vw;
+    height: fit-content;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Caslon-regular';
+    margin: 0 auto 30px auto;
+    line-height: 22px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 4.375vw;
+}
+
+.buttons a{
+    cursor: default;
+}
+
+.button{
+    color: #151344;
+    background-color: #FBFBF5;
+    text-transform: uppercase;
+    border: solid #151344 2px;
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 1.07vw;
+    padding-right: 1.07vw;
+    padding-top: 0.21vw;
+    padding-bottom: 0.214vw;
+    font-family: "Termina";
+}
+
+button{
+    cursor: pointer;
+}
+
+.reserveButton{
+    margin-left: 1.71875vw;
+}
+
+.titleRooms{
+    font-family: "Termina Demi";
+    font-size: 1.15vw;
+    padding-bottom: 4.2vw;
+    letter-spacing: 0.05em;
+    color: #151344;
+}
+
+.roomName{
+    font-family: "Termina Demi";
+    font-size: 1vw;
+    letter-spacing: 0.05vw;
+}
+.roomName br{
+    display:none;
+}
+
+
+@media screen and (max-width: 1400px){
+    .roomName{
+        font-size: 14px;
+    }
+
+    .titleRooms{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 769px){
+    .rooms{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        column-gap: 20px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .room{
+        width: 95%;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    #mid{
+        grid-column: 1;
+    }
+
+    .roomImg{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .roomName{
+        width: 100%;
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        margin: 0px;
+    }
+
+    .roomName br{
+        display: block;
+    }
+
+    .roomDescription{
+        font-size: 14px;
+        width: 70%;
+        padding: 0.05vw;
+        text-align: left;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+
+    .titleRooms{
+        font-size: 13px;
+        padding-bottom: 15px;
+    }
+
+    .button{
+        border : solid #151344 1px;
+        font-size : 10px;
+        padding : 5px 10px;
+    }
+
+    .buttons{
+        margin-bottom: 20px;
+        align-self: flex-start;
+    }
+
+    .reserveButton{
+        margin-left : 33px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    #homeImgMobile{
+        display: block;
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+    }
+
+    #homeImgDesk{
+        display: none;
+    }
+}

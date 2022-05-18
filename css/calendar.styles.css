@@ -1,0 +1,602 @@
+.resa {
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    display: none;
+    top: 0;
+}
+
+.fermeture {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #F6F4EE;
+    align-items: center;
+}
+
+.logo-module {
+    max-width: 150px;
+    max-height: 20px;
+    margin-left: 20px;
+}
+
+.cross {
+    max-width: 25px;
+    padding: 20px;
+}
+.cross:hover{
+    cursor: pointer;
+}
+
+/*OUVERTURE/FERMETURE*/
+.big-container {
+    /*display: flex;*/
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F6F4EE;
+    display: none;
+    padding-bottom: 50px;
+    /*added*/
+}
+
+/*OUVERTURE/FERMETURE*/
+
+body {
+    margin: 0px;
+}
+
+.gauche-mobile, .droit-mobile {
+    display: none;
+}
+
+.big-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F6F4EE;
+    display: none;
+}
+
+.small-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.first-container {
+    margin-right: 30px;
+}
+
+.mois-annee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    font-family: 'Termina Demi';
+}
+
+.zone-1,
+.zone-2 {
+    position: relative;
+}
+
+.fleche {
+    height: 12px;
+    max-width: 50px;
+    position: absolute;
+}
+
+.gauche {
+    top: 13px;
+    left: 301px;
+}
+
+.droit {
+    top: 13px;
+    right: 301px;
+}
+
+.jour {
+    display: flex;
+    flex-direction: row;
+}
+
+.num-jour {
+    display: flex;
+    flex-direction: column;
+}
+
+.num-jour p {
+    font-size: 8px;
+    font-family: 'Termina Demi';
+}
+
+
+
+.ligne-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0px 20px 0px 10px;
+}
+
+.ligne-1 p {
+    padding: 2px 12px;
+    text-align: center;
+}
+
+.ligne-1 p,
+.ligne-2 p,
+.ligne-3 p,
+.ligne-4 p,
+.ligne-5 p,
+.ligne-6 p {
+    margin-left: 10px;
+    width: calc(100%/7);
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+
+.ligne-5 p {
+    margin-bottom: 24px;
+}
+
+.ligne-2,
+.ligne-3,
+.ligne-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 20px 0px 10px;
+}
+
+
+.ligne-5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0px 20px 0px 10px;
+}
+
+.ligne-6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0px 20px 0px 10px;
+}
+
+.ligne-6 p {
+    margin-left: 10px;
+    width: calc(100%/7);
+    text-align: center;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    display: none;
+}
+
+/*.today {
+    background: red;
+}*/
+
+.first {
+    background: #2B2A56;
+    color: white;
+}
+
+.second {
+    background: #2B2A56;
+    color: white;
+}
+
+.day:hover {
+    background: #2B2A56;
+    cursor: pointer;
+    color: white;
+}
+
+.inRange {
+    background: rgb(32, 30, 65, 0.5);
+    color: white;
+}
+
+.premier {
+    margin-left: 20px !important;
+}
+
+.dernier {
+    margin-right: 20px !important;
+}
+
+.small-container {
+    border: 2px solid #2B2A56;
+}
+
+.smallP {
+    border: 2px solid #2B2A56;
+    padding: 2px 12px;
+    font-size: 12px;
+}
+
+.bigP {
+    border: 2px solid #2B2A56;
+    padding: 2px 10.6px;
+    font-size: 12px;
+}
+
+.jour p {
+    color: #383B34;
+    border: 2px solid #2B2A56;
+    margin-left: 10px;
+    padding: 2px 7px;
+    font-size: 8px;
+    letter-spacing: 0.2vw;
+    width: calc(100%/7);
+    text-align: center;
+    font-family: 'Termina Demi';
+}
+
+.empty {
+    border: 2px solid #F6F4EE;
+    font-size: 12px;
+}
+
+
+.month {
+    color: #2B2A56;
+    text-transform: uppercase;
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+.year {
+    color: #2B2A56;
+    font-size: 9px;
+}
+
+
+/*première partie du module*/
+/*webkit for chrome / safari / firefox ( même Opera ) */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*code*/
+
+.titres {
+    color: #2B2A56;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-family: 'Termina Demi';
+}
+
+input {
+    border: 2px solid #2B2A56;
+    background-color: #F6F5EF;
+    height: 35px;
+}
+
+.moduleresa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F6F5EF;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #2B2A56;
+}
+
+.membres {
+    display: flex;
+    flex-direction: row;
+}
+
+.seconde-date,
+.premiere-date {
+    position: relative;
+}
+
+.logo-resa-2 {
+    background-color: #F6F5EF;
+    max-width: 23px;
+    max-height: 23px;
+    position: absolute;
+    top: 39px;
+    left: 156px;
+}
+
+
+.logo-resa-1 {
+    max-width: 23px;
+    max-height: 23px;
+    position: absolute;
+    top: 39px;
+    left: 156px;
+}
+
+.arrive,
+.depart {
+    width: 175px;
+    margin-right: 30px;
+    padding-left: 10px;
+}
+
+.arrive:hover,
+.depart:hover {
+    cursor: pointer;
+}
+
+.arrive:focus,
+.depart:focus,
+.membres input:focus,
+.codepromo {
+    outline: none;
+}
+
+.arrive,
+.depart,
+.membres input,
+.codepromo {
+    font-family: 'Termina Demi';
+    color: #2B2A56;
+    font-size: 11px;
+}
+
+.membres input,
+.codepromo {
+    max-width: 87px;
+    margin-right: 30px;
+    padding-left: 10px;
+}
+
+.tarifs {
+    width: 150px;
+    height: 41px;
+    align-self: flex-end;
+    border: none;
+    background-color: #2B2A56;
+    color: #F6F5EF;
+    text-decoration: none;
+    font-size: 9px;
+    font-family: 'Termina Demi';
+    margin-bottom: 0px;
+}
+
+.tarifs:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:991px) {
+    .tarifs {
+        margin-top: 35px;
+    }
+
+}
+
+@media screen and (max-width:880px) {
+    .jour p {
+        font-size: 0.55rem;
+    }
+
+    .ligne-1 p,
+    .ligne-2 p,
+    .ligne-3 p,
+    .ligne-4 p,
+    .ligne-5 p,
+    .ligne-6 p {
+        font-size: 8.8px;
+    }
+
+    .gauche {
+        left: 309px;
+    }
+
+    .droit {
+        right: 309px;
+    }
+}
+
+@media screen and (max-width:841px) {
+    .tarifs {
+        margin-top: 20px;
+    }
+
+}
+
+
+@media screen and (max-width:800px) {
+    .first-container {
+        margin-right: 10px;
+    }
+
+    .jour p {
+        font-size: 0.50rem;
+    }
+
+    .ligne-1 p,
+    .ligne-2 p,
+    .ligne-3 p,
+    .ligne-4 p,
+    .ligne-5 p,
+    .ligne-6 p {
+        font-size: 8px;
+    }
+
+    .gauche {
+        left: 297px;
+    }
+
+    .droit {
+        right: 297px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .ligne-1 p, .ligne-2 p, .ligne-3 p, .ligne-4 p, .ligne-5 p, .ligne-6 p {
+        margin-left: 5px;
+    }
+
+    .ligne-1, .ligne-2, .ligne-3, .ligne-4, .ligne-5, .ligne-6 {
+        margin: 0px 10px 0px 5px;
+    }
+
+    .premier {
+        margin-left: 10px !important;
+    }
+
+    .dernier {
+        margin-right: 10px !important;
+    }
+
+    .fleche {
+        max-width: 47px;
+    }
+
+    .jour p {
+        margin-left: 5px;
+    }
+
+    .gauche {
+        left: 262px;
+    }
+
+    .droit {
+        right: 262px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .big-container {
+        flex-direction: column;
+    }
+
+    .arrive, .depart {
+        width: 100%;
+    }
+
+    .seconde-date, .premiere-date {
+        margin: 17px;
+        width: 87%;
+    }
+
+    .membres input, .codepromo {
+        margin-right: 0px;
+        width: 100%;
+        max-width: initial;
+    }
+
+    .membres {
+        justify-content: center;
+        width: 87%;
+        margin-left: 20px;
+    }
+
+    .membres-1 {
+        margin-right: 41px;
+        width: 50%;
+    }
+
+    .membres-2 {
+        margin-right: 0px;
+        width: 50%;
+    }
+
+    .logo-resa-1, .logo-resa-2 {
+        right: -2px;
+        left: initial;
+        top: 42px;
+    }
+
+    .code {
+        margin-right: 20px;
+    }
+
+    .code, .tarifs {
+        width: 41%;
+    }
+
+    input {
+        height: 40px;
+    }
+
+    .tarifs {
+        height: 46px;
+    }
+
+    .tarifs {
+        font-size: 9px;
+    }
+
+    .first-container {
+        margin-left: 0px;
+    }
+
+    .small-container {
+        margin: auto;
+        width: 90%;
+    }
+
+    .droit {
+        left: 13px;
+    }
+
+    .gauche {
+        left: inherit;
+        right: 13px;
+    }
+
+    .jour p {
+        font-size: 0.65rem;
+        margin-left: 8px;
+    }
+
+    .ligne-1, .ligne-2, .ligne-3, .ligne-4, .ligne-5, .ligne-6 {
+        margin: 0px 10px 0px 0px;
+    }
+
+    .ligne-1 p, .ligne-2 p, .ligne-3 p, .ligne-4 p, .ligne-5 p, .ligne-6 p {
+        font-size: 10.4px;
+        margin-left: 8px;
+        padding: 1% 2%;
+    }
+
+    .premiere-date-chiffre {
+        margin-left: 10px;
+    }
+
+    .gauche-mobile, .droit-mobile {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .moduleresa {
+        flex-direction: column;
+    }
+
+    .tarifs {
+        align-self: center;
+        width: 70%;
+    }
+
+    .code {
+        width: 87%;
+        margin-left: 20px;
+    }
+}
+
+.anterieur {
+    color: #a8afb5;
+}

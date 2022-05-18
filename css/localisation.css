@@ -1,0 +1,82 @@
+
+#localisationFrame{
+    margin-left: auto;
+    margin-right: auto;
+    width: 94.9vw;
+    height: 44.48vw;
+}
+
+.adresse{
+    font-family: 'Termina Demi';
+    font-size: 18px;
+    margin-top: 2.23vw;
+    letter-spacing: 0.1em;
+    color: #151344;
+}
+
+.home .adresse{
+    display: flex;
+}
+
+.home .adresse span{
+    margin-left : 1.04vw;
+    text-transform: capitalize;
+}
+
+.ecart{
+    margin-right: 2.08vw;
+}
+
+.titleRooms{
+    padding: 0px;
+}
+
+#description_classic_room{
+    padding-top: 20px;
+}
+
+.adresse br{
+    display: none;
+}
+
+@media screen and (max-width: 1400px){
+    .adresse{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .adresse{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .adresse{
+        flex-flow: column;
+        padding-right: 1.04vw;;
+    }
+    .adresse p{
+        margin: 5px;
+    }
+    .ecart{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .titleRooms{
+        padding : 15px 0;
+        font-size: 14px;
+    }
+
+    .adresse{
+        line-height: 17px;
+        font-size: 13px;
+        word-spacing: 5px;
+    }
+
+    .adresse br{
+        display: block;
+    }
+}

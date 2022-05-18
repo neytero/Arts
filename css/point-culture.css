@@ -1,0 +1,369 @@
+/* ######################################## */
+/* GENERAL */
+/* ######################################## */
+body {
+    background-color: #FBFBF5;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main>img {
+    width: 200px !important;
+    height: 100px !important;
+}
+
+main #book-app button:not(#summary) {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+main #book-app button:active,
+main #book-app button:focus,
+main #book-app button:focus-within,
+main #book-app button:focus-visible,
+main #book-app button:target,
+main #book-app button:visited {
+    background-color: transparent;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        height: 90vh;
+    }
+}
+
+/* ######################################## */
+/* GESTION AFFICHAGE PAR PAGE  */
+/* ######################################## */
+#book-app[data-page="0"] #arrow-left,
+#book-app[data-page="0"] #summary,
+#book-app[data-page="6"] #arrow-right {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#book-app:not([data-page="0"]) #arrow-left,
+#book-app:not([data-page="0"]) #summary,
+#book-app:not([data-page="6"]) #arrow-right {
+    cursor: pointer;
+    pointer-events: initial;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+
+    #book-app[data-page="0"] #arrow-left,
+    #book-app[data-page="0"] #summary,
+    #book-app[data-page="12"] #arrow-right {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    #book-app:not([data-page="0"]) #arrow-left,
+    #book-app:not([data-page="0"]) #summary,
+    #book-app:not([data-page="12"]) #arrow-right {
+        cursor: pointer;
+        pointer-events: initial;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+}
+
+/* ######################################## */
+/* PAGE */
+/* ######################################## */
+#pages {
+    grid-row-start: top-book;
+    grid-row-end: bot-book;
+    grid-column-start: left-page;
+    grid-column-end: right-page;
+
+    display: flex;
+}
+
+.page {
+    z-index: -1;
+    display: flex;
+    width: 50%;
+    max-width: 40vw;
+    height: 100%;
+}
+
+#book-app[data-page="0"] .page {
+    z-index: 0;
+}
+
+#book-app:not([data-page="0"]) .page {
+    z-index: -1;
+}
+
+#book-app[data-page="2"] #page-left {
+    justify-content: end;
+}
+
+#book-app[data-page="3"] #page-left {
+    justify-content: end;
+}
+
+#book-app[data-page="5"] #page-left {
+    justify-content: end;
+}
+
+
+@media screen and (max-width: 600px) {
+    #pages {
+        grid-column-start: start;
+        grid-column-end: end;
+    }
+
+    .page,
+    .page#page-right {
+        max-width: 98vw;
+        width: 100%;
+    }
+
+    #book-app:not([data-page="0"]) .page#page-right {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page#page-left {
+        width: 0%;
+    }
+}
+
+/* ######################################## */
+/* BOOK */
+/* ######################################## */
+#book-app {
+    padding-top: 70px;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: [start] 1fr [left] minmax(auto, 10%) [left-page] auto [right-page] minmax(auto, 10%) [right] 1fr [end];
+    grid-template-rows: [top] 50px [top-book] auto [bot-book] 1fr [bottom];
+}
+
+#book-app #book-background {
+    position: relative;
+    z-index: -1;
+    width: auto;
+    height: 100%;
+    max-height: 80vh;
+    grid-row-start: top-book;
+    grid-row-end: bot-book;
+    grid-column-start: left-page;
+    grid-column-end: right-page;
+}
+
+#book-app #book-background img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+    #book-app {
+        padding-top: 60px;
+        height: 75%;
+        grid-template-rows: [top] 60px [top-book] 85% [bot-book] 1fr [bottom];
+    }
+
+    #book-app #book-background {
+        height: 100%;
+        grid-column-start: start;
+        grid-column-end: end;
+    }
+
+    #book-app #book-background img {
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        object-position: right top;
+    }
+}
+
+/* ######################################## */
+/* AREA-CLICK */
+/* ######################################## */
+.area-click {
+    grid-row-start: top-book;
+    grid-row-end: bot-book;
+    grid-column-start: left-page;
+    grid-column-end: right-page;
+    width: 50%;
+}
+
+#book-app[data-page="0"] .area-click {
+    z-index: -1;
+}
+
+#book-app:not([data-page="0"]) .area-click {
+    z-index: 0;
+}
+
+#js-area-click-left {
+    justify-self: start;
+}
+
+#js-area-click-right {
+    justify-self: end;
+}
+
+@media screen and (max-width: 600px) {
+    #js-area-click-left {
+        grid-column-start: start;
+        grid-column-end: left;
+    }
+
+    #js-area-click-right {
+        grid-column-start: right;
+        grid-column-end: end;
+    }
+
+}
+
+
+/* ######################################## */
+/* ARROW */
+/* ######################################## */
+button.arrow {
+    padding: 20px 10px;
+    justify-self: center;
+    align-self: center;
+}
+
+.arrow {
+    grid-row-start: top-book;
+    grid-row-end: bot-book;
+}
+
+#arrow-left {
+    grid-column-start: left;
+    grid-column-end: left-page;
+}
+
+#arrow-right {
+    grid-column-start: right-page;
+    grid-column-end: right;
+}
+
+@media screen and (max-width: 920px) {
+    .arrow {
+        grid-row-start: bot-book;
+        grid-row-end: bottom;
+    }
+
+    .arrow img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        max-width: 50px;
+    }
+
+    #arrow-left {
+        grid-column-start: left-page;
+        grid-column-end: right-page;
+        justify-self: start;
+        align-self: baseline;
+        margin-left: 0%;
+    }
+
+    #arrow-right {
+        grid-column-start: left-page;
+        grid-column-end: right-page;
+        justify-self: end;
+        align-self: baseline;
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .arrow {
+        grid-row-start: bot-book;
+        grid-row-end: bottom;
+    }
+
+    .arrow img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        max-width: 50px;
+    }
+
+    #arrow-left {
+        grid-column-start: start;
+        grid-column-end: left-page;
+        justify-self: start;
+        align-self: baseline;
+        margin-left: 20%;
+    }
+
+    #arrow-right {
+        grid-column-start: right-page;
+        grid-column-end: end;
+        justify-self: end;
+        align-self: baseline;
+        margin-right: 20%;
+    }
+}
+
+
+/* ######################################## */
+/* SUMMARY */
+/* ######################################## */
+button#summary {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    grid-column-start: left-page;
+    grid-column-end: right-page;
+    grid-row-start: top;
+    grid-row-end: top-book;
+    justify-self: center;
+    align-self: center;
+    font-family: "Termina Demi";
+    font-weight: 500;
+    font-style: normal;
+    color: #151344;
+    font-size: 0.60rem;
+    padding: 3px 2px;
+    margin-left: -50%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: border 0.5s ease-in-out;
+    border-bottom: 1px solid transparent;
+}
+
+button#summary:hover {
+    transition: border 0.5s ease-in-out;
+    border-bottom: 1px solid #151344 !important;
+}
+
+@media screen and (max-width: 600px) {
+    button#summary {
+        grid-column-start: start;
+        grid-column-end: left;
+        justify-self: flex-start;
+        margin-left: 20px;
+        align-self: end;
+        margin-bottom: 10px;
+    }
+}
