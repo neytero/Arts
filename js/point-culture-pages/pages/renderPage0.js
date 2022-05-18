@@ -9,7 +9,7 @@ export const renderPage0 = () => {
   pageElement.classList.add('page-elements');
   
   const pageTitleTop = document.createElement("div");
-  pageTitleTop.classList.add('page-title');
+  pageTitleTop.classList.add('page-title','lesarts');
   const titleTop = document.createElement("span");
   titleTop.textContent = 'LES ARTS';
   pageTitleTop.appendChild(titleTop);
@@ -73,7 +73,7 @@ export const renderPage0 = () => {
   pageElement.appendChild(chapterList);
 
   const pageTitleBot = document.createElement("div");
-  pageTitleBot.classList.add('page-title');
+  pageTitleBot.classList.add('page-title','sttropez');
   const titleBot = document.createElement("span");
   titleBot.textContent = 'SAINT-TROPEZ';
   pageTitleBot.appendChild(titleBot);

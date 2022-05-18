@@ -100,7 +100,13 @@
     flex-direction: column;
     font-size: calc(1.1vmin + 5px);
     letter-spacing: 1px;
-    margin: 15px 0px;
+}
+#page0 .page-elements .lesarts {
+    margin-top: 15px;
+}
+
+#page0 .page-elements .sttropez {
+    margin-bottom: 15px;
 }
 
 #page0 .page-elements .chapter-list {
@@ -125,8 +131,12 @@
         cursor: pointer;
     }
 
-    #page0 .page-elements .page-title {
-        margin: 0px;
+    #page0 .page-elements .lesarts {
+        margin-top: 0px;
+    }
+    
+    #page0 .page-elements .sttropez {
+        margin-bottom: 0px;
     }
 }
 
